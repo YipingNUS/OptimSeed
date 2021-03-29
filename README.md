@@ -1,6 +1,6 @@
 # OptimSeed
 
-The source code and seed word sets used for [Seed Word Selection for Weakly-Supervised Text Classification with Unsupervised Error Estimation](https://naacl2021-srw.github.io/), to appear in NAACL-HLT SRW 2021.
+The source code and seed word sets used for [Seed Word Selection for Weakly-Supervised Text Classification with Unsupervised Error Estimation](paper/paper.pdf), to appear in NAACL-HLT SRW 2021.
 
 <p align="center"><img width="100%" src="img/fig1.jpg"/></p>
 
@@ -9,7 +9,7 @@ TODO
 
 ## Step II: Train Weakly-Supervised Classifiers with Candidate Seed Words
 
-We use the Generalized Expectation (GE) Java implementation provided in the [MALLET library](http://mallet.cs.umass.edu/ge-classification.php). The code is relatively straight-forward to set up and run. We do not provide the Java code to train interim classifiers. You can either follow the instructions in the MALLET library and use GE or replace it with another weakly-supervised text classification model.
+We use the Generalized Expectation (GE) Java implementation provided in the [MALLET library](http://mallet.cs.umass.edu/ge-classification.php). The code is relatively straight-forward to set up and run. We do not provide the Java code to train interim classifiers. You can either follow the instructions in the MALLET library to use GE or replace it with another weakly-supervised text classification model.
 
 ## Step III: Unsupervised Error Estimation
 TODO
