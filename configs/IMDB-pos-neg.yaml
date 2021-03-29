@@ -1,0 +1,22 @@
+corpus_file: imdb.h5
+categories:
+  - pos
+  - neg
+kw_file: IMDB-pos-neg
+seed_words:
+  - great
+  - worst
+model_file: imdb_model
+# parameter for Java
+train_corpus_path: /Users/admin/corpora/SentimentAnalysis/aclImdb/train/
+test_corpus_path: /Users/admin/corpora/SentimentAnalysis/aclImdb/test/
+label_matrix_path: /Users/admin/dataless-classification/error-estimation/label_matrices/
+label_matrix_file: IMDB-pos-neg
+raw_keyword_path: /Users/admin/dataless-classification/error-estimation/noisy_keywords/
+keyword_path: /Users/admin/dataless-classification/error-estimation/noisy_keywords/ge_exp/
+keyword_files:  # each file contains a different set of keywords. one line per category, keywords are space-deliminated
+  - IMDB-pos-neg-seed
+  - IMDB-pos-neg-all
+  - IMDB-pos-neg-manual
+  - IMDB-pos-neg-ours
+  - IMDB-pos-neg-ours-new

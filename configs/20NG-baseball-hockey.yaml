@@ -1,0 +1,24 @@
+# parameter for Python
+corpus_file: 20NG-baseball-hockey.h5
+categories:
+  - rec.sport.baseball
+  - rec.sport.hockey
+kw_file: 20NG-baseball-hockey
+seed_words:
+  - baseball
+  - hockey
+model_file: 20ng_model
+# parameter for Java
+train_corpus_path: /Users/admin/corpora/TextClassification/20_newsgroups_preprocessed/train/
+test_corpus_path: /Users/admin/corpora/TextClassification/20_newsgroups_preprocessed/test/
+label_matrix_path: /Users/admin/dataless-classification/error-estimation/label_matrices/
+label_matrix_file: 20ng-baseball-hockey
+raw_keyword_path: /Users/admin/dataless-classification/error-estimation/noisy_keywords/
+keyword_path: /Users/admin/dataless-classification/error-estimation/noisy_keywords/ge_exp/
+keyword_files:  # each file contains a different set of keywords. one line per category, keywords are space-deliminated
+  - 20NG-baseball-hockey-0
+  - 20NG-baseball-hockey-1
+  - 20NG-baseball-hockey-2
+  - 20NG-baseball-hockey-3
+    #- 20NG-baseball-hockey-4
+    #- 20NG-baseball-hockey-5

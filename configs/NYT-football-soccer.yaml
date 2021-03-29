@@ -1,0 +1,21 @@
+corpus_file: nyt.h5
+categories:
+  - football
+  - soccer
+kw_file: NYT-football-soccer
+seed_words:
+  - football
+  - soccer
+model_file: nyt_model
+# parameter for Java
+train_corpus_path: /Users/admin/corpora/TextClassification/nyt/train/
+test_corpus_path: /Users/admin/corpora/TextClassification/nyt/test/
+label_matrix_path: /Users/admin/dataless-classification/error-estimation/label_matrices/
+label_matrix_file: NYT-football-soccer
+raw_keyword_path: /Users/admin/dataless-classification/error-estimation/noisy_keywords/
+keyword_path: /Users/admin/dataless-classification/error-estimation/noisy_keywords/ge_exp/
+keyword_files:  # each file contains a different set of keywords. one line per category, keywords are space-deliminated
+  - NYT-football-soccer-seed
+  - NYT-football-soccer-all
+  - NYT-football-soccer-manual
+  - NYT-football-soccer-ours

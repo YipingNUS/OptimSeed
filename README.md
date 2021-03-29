@@ -5,7 +5,16 @@ The source code and seed word sets used for [Seed Word Selection for Weakly-Supe
 <p align="center"><img width="100%" src="img/fig1.jpg"/></p>
 
 ## Step I: Keyword Expansion
-TODO
+Please see [keyword_expansion.ipynb](keyword_expansion.ipynb). It takes an initial seed word for each category and an unlabeled corpus to expand seed words for each category. Since there're many experiments, I used yaml config files (under the [configs](configs) folder) to manage the experiments. You can ignore the other fields and update the following parameters in the config file. 
+
+```
+categories = config['categories']  # the list of categories 
+seed_words = config['seed_words']  # the initial seed words (usually the category name)
+output_file = config['kw_file']  # the output keyword file after keyword expansion
+corpus_path = config['train_corpus_path']  # the input corpus
+```
+
+In the notebook I added scripts to load each dataset from their original form (individual files under folder/csv). If you experiment on your own dataset, you might modify from an existing example or write your own.
 
 ## Step II: Train Weakly-Supervised Classifiers with Candidate Seed Words
 
@@ -50,6 +59,18 @@ An example `AGNews-business-sports-all` means it's from AGNews dataset the Busin
 | all                        | -                                        |
 | ours                       | ours                                     |
 | manual                     | seed                                     |
+
+
+## Datasets
+
+All datasets used in this work are public datasets published in previous work.
+
+| Dataset | Link |
+|----------------------------|------------------------------------------|
+| AGNews                       | [Link](https://github.com/yumeng5/WeSTClass/tree/master/agnews)                                     |
+| NYT                        | [Link](https://github.com/yumeng5/WeSHClass/tree/master/nyt)                                        |
+| Yelp                       | [Link](https://github.com/yumeng5/WeSTClass/tree/master/yelp)                                     |
+| IMDB                     | [Link](https://ai.stanford.edu/~amaas/data/sentiment/)                                     |
 
 ## Citations
 

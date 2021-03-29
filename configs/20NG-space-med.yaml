@@ -1,0 +1,21 @@
+corpus_file: 20NG-space-med.h5
+categories:
+  - sci.space
+  - sci.med
+kw_file: 20NG-space-med
+seed_words:
+  - nasa
+  - medicine
+model_file: 20ng_model
+# parameter for Java
+train_corpus_path: /Users/admin/corpora/TextClassification/20_newsgroups_preprocessed/train/
+test_corpus_path: /Users/admin/corpora/TextClassification/20_newsgroups_preprocessed/test/
+label_matrix_path: /Users/admin/dataless-classification/error-estimation/label_matrices/
+label_matrix_file: 20ng-space-med
+raw_keyword_path: /Users/admin/dataless-classification/error-estimation/noisy_keywords/
+keyword_path: /Users/admin/dataless-classification/error-estimation/noisy_keywords/ge_exp/
+keyword_files:  # each file contains a different set of keywords. one line per category, keywords are space-deliminated
+  - 20NG-space-med-0
+  - 20NG-space-med-1
+  - 20NG-space-med-2
+  - 20NG-space-med-3

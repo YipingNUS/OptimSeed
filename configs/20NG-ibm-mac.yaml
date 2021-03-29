@@ -1,0 +1,22 @@
+corpus_file: 20NG-ibm-mac.h5
+categories:
+  - comp.sys.ibm.pc.hardware
+  - comp.sys.mac.hardware
+kw_file: 20NG-ibm-mac
+seed_words:
+  - windows
+  - apple
+model_file: 20ng_model
+# parameter for Java
+train_corpus_path: /Users/admin/corpora/TextClassification/20_newsgroups_preprocessed/train/
+test_corpus_path: /Users/admin/corpora/TextClassification/20_newsgroups_preprocessed/test/
+label_matrix_path: /Users/admin/dataless-classification/error-estimation/label_matrices/
+label_matrix_file: 20ng-ibm-mac
+raw_keyword_path: /Users/admin/dataless-classification/error-estimation/noisy_keywords/
+keyword_path: /Users/admin/dataless-classification/error-estimation/noisy_keywords/ge_exp/
+keyword_files:  # each file contains a different set of keywords. one line per category, keywords are space-deliminated
+  - 20NG-ibm-mac-0
+  - 20NG-ibm-mac-1
+  - 20NG-ibm-mac-2
+  - 20NG-ibm-mac-3
+  - 20NG-ibm-mac-final

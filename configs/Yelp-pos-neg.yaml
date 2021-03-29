@@ -1,0 +1,22 @@
+corpus_file: yelp.h5
+categories:
+  - pos
+  - neg
+kw_file: Yelp-pos-neg
+seed_words:
+  - good
+  - bad
+model_file: yelp_model
+# parameter for Java
+train_corpus_path: /Users/admin/corpora/SentimentAnalysis/yelp/train/
+test_corpus_path: /Users/admin/corpora/SentimentAnalysis/yelp/test/
+label_matrix_path: /Users/admin/dataless-classification/error-estimation/label_matrices/
+label_matrix_file: Yelp-pos-neg
+raw_keyword_path: /Users/admin/dataless-classification/error-estimation/noisy_keywords/
+keyword_path: /Users/admin/dataless-classification/error-estimation/noisy_keywords/ge_exp/
+keyword_files:  # each file contains a different set of keywords. one line per category, keywords are space-deliminated
+  - Yelp-pos-neg-seed
+  - Yelp-pos-neg-all
+  - Yelp-pos-neg-manual
+  - Yelp-pos-neg-ours
+  - Yelp-pos-neg-ours-new

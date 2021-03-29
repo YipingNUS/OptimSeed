@@ -1,0 +1,21 @@
+corpus_file: AGNews-business-tech.h5
+categories:
+  - Business
+  - Tech
+kw_file: AGNews-business-tech
+seed_words:
+  - business
+  - computer
+model_file: agnews_model
+# parameter for Java
+train_corpus_path: '/Users/admin/corpora/TextClassification/AG News Corpus/train/'
+test_corpus_path: '/Users/admin/corpora/TextClassification/AG News Corpus/test/'
+label_matrix_path: /Users/admin/dataless-classification/error-estimation/label_matrices/
+label_matrix_file: AGNews-business-tech
+raw_keyword_path: /Users/admin/dataless-classification/error-estimation/noisy_keywords/
+keyword_path: /Users/admin/dataless-classification/error-estimation/noisy_keywords/ge_exp/
+keyword_files:  # each file contains a different set of keywords. one line per category, keywords are space-deliminated
+  - AGNews-business-tech-seed
+  - AGNews-business-tech-all
+  - AGNews-business-tech-manual
+  - AGNews-business-tech-ours
