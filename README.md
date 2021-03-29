@@ -12,7 +12,27 @@ TODO
 We use the Generalized Expectation (GE) Java implementation provided in the [MALLET library](http://mallet.cs.umass.edu/ge-classification.php). The code is relatively straight-forward to set up and run. We do not provide the Java code to train interim classifiers. You can either follow the instructions in the MALLET library to use GE or replace it with another weakly-supervised text classification model.
 
 ## Step III: Unsupervised Error Estimation
-TODO
+
+**Note:** I implemented the Bayesian error estimation (BEE) algorithm in Numpy following the paper [Estimating Accuracy from Unlabeled Data: A Bayesian Approach](http://proceedings.mlr.press/v48/platanios16.html). I tried to follow the paper as closely as possible. However, due to my limited knowledge in Bayesian statistics, I cannot guarantee that the code is error-free. Later I realized that the original author of the BEE paper published his source code [here](https://github.com/eaplatanios/makina). You can consider using his repo instead if you're familiar with Java.
+
+The main class for BEE is [bee.py](bee.py). 
+
+```
+def __init__(self, labeling_matrix, num_iters=50, init_method='sampling', filter_estimators=False, filter_by_std=False):
+        """ Initialize the BEE model
+
+        :param labeling_matrix: the prediction matrix [num_samples, num_estimators]. Each entry is either 0 or 1
+        :param num_iters: the number of Gibbs sampling iterations
+        :param init_method: [maj, sampling]
+        """
+```
+
+The only parameter you need to pass to it is the labeling matrix, which contains the binary predictions from interim classifiers. All other parameters you can leave as default. The model performs inference upon initialization and you can access the following attributes after it's done.
+
+```
+bee.true_labels: the inferred latent label for each example.
+bee.error_rates: the estimated error rate for each interim classifier (the inverse of the accuracy). 
+```
 
 ## Seed Words in the Paper
 
